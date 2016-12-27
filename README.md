@@ -1,7 +1,7 @@
+# gopher-count
 ![Count Your Gophers](https://raw.githubusercontent.com/steveoc64/gopher-count/master/gopher-count.png)
 
-# gopher-count
-Analyse the output from a GopherJS compile, and see whats taking up the most space.
+A Tool to analyse the output from a GopherJS compile, and see whats taking up the most space.
 
 ## What and Why ?
 
