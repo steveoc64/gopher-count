@@ -66,8 +66,8 @@ Assumes that the compiled JS output :
 * Generates lines separated by ASCII  \n
 * Contains several lines that are not related to a package, and are ignored by gopher-count
 * That the output of each package compilation :
-	** Is entirely contained on a single line of generated JS
-	** Begins with the general form  $package["name-of-package"]
+	* Is entirely contained on a single line of generated JS
+	* Begins with the general form  $package["name-of-package"]
 * That the LAST package in the output is for the application "main" package, and so the gopher-count can safely quit once it has processed the "main" package.
 
 If the gopherjs compiler radically changes the way that it generates the compiled JS output, then gopher-count will need to be changed as well.
