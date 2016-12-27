@@ -51,5 +51,22 @@ $ gopherjs build *.go -o output-file.js -m
 $ gopher-count output-file.js | sort -n
 ```
 
+## Caveats
 
+Internally, the code is dirt simple, and makes wild assumptions on the format of the output from the gopherjs compiler.
+
+In particcular, gopher-count makes the following assumptions about the output from the gopherjs compiler.
+
+Assumes that the compiled JS output :
+
+* Generates lines separated by ASCII  \n
+* Contains several lines that are not related to a package, and are ignored by gopher-count
+* That the output of each package compilation :
+	** Is entirely contained on a single line of generated JS
+	** Begins with the general form  $package["name-of-package"]
+* That the LAST package in the output is for the application "main" package, and so the gopher-count can safely quit once it has processed the "main" package.
+
+If the gopherjs compiler radically changes the way that it generates the compiled JS output, then gopher-count will need to be changed as well.
+
+The code is quick and simple, and gets the job with the bare minimum of fuss. It should not be considered as good idiomatic Go, or otherwise worthy of study and philosophizing about.
 
