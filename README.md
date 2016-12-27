@@ -1,3 +1,5 @@
+![Count Your Gophers](https://raw.githubusercontent.com/steveoc64/gopher-count/master/gopher-count.png)
+
 # gopher-count
 Analyse the output from a GopherJS compile, and see whats taking up the most space.
 
@@ -38,7 +40,9 @@ $ gopher-count <my-project-name>.js
 
 This generates output to stdout, in the form :
 
-<size-in-bytes> TAB <name-of-GO-package>
+```
+size-in-bytes + TAB + name-of-GO-package
+```
 
 With 1 line per package.
 
