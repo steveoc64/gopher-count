@@ -72,5 +72,5 @@ Assumes that the compiled JS output :
 
 If the gopherjs compiler radically changes the way that it generates the compiled JS output, then gopher-count will need to be changed as well.
 
-The code is quick and simple, and gets the job with the bare minimum of fuss. It should not be considered as good idiomatic Go, or otherwise worthy of study and philosophizing about.
+The code is quick and simple, and gets the job with the bare minimum of fuss. It should not be considered as good idiomatic Go, or otherwise worthy of study and philosophizing about ... just stick it in your makefile / gulpfile and start using it.
 
