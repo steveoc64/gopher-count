@@ -26,7 +26,7 @@ func doCount(filename string) {
 		return
 	}
 
-	fmt.Printf("Compiled JS: %s = %d bytes\n", filename, stats.Size())
+	// fmt.Printf("Compiled JS: %s = %d bytes\n", filename, stats.Size())
 
 	data := make([]byte, stats.Size())
 	_, err = fd.Read(data)
