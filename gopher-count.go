@@ -42,7 +42,7 @@ func doCount(filename string) {
 	for i, v := range data {
 		if startOfLine {
 			if string(data[i:i+11]) == `$packages["` {
-				// scan out past 22 to get the terminating "
+				// scan out past the 11 byte mark to get the terminating " quote
 				for ii := i + 12; ; ii++ {
 					if data[ii] == 34 {
 						// println("ThePackage", data[i+11:ii])
