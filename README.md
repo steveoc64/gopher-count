@@ -1,7 +1,7 @@
 # gopher-count
 ![Count Your Gophers](https://raw.githubusercontent.com/steveoc64/gopher-count/master/gopher-count.png)
 
-A Tool to analyse the output from a GopherJS compile, and see whats taking up the most space.
+A Tool to analyse the output from a (minified) GopherJS compile, and see whats taking up the most space.
 
 ## What and Why ?
 
@@ -14,7 +14,12 @@ One of the downsides of GopherJS, in its current state (end of 2016), is that th
 
 This tool (gopher-count) is a simple tool that is used post-compilation on the front end, to show exactly how the size of the compiled JS file is distributed across the various packages.
 
-
+In its current form, gopher-count only works on the minified output from the gopherjs compiler
+```
+gopherjs build *.go -m
+```
+... since this is usually the starting point of a production build that you want to optimize. I can add 
+processing for non-minified output if anyone thinks there is a need for it ?
 
 
 ## Installation
