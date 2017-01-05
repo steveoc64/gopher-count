@@ -41,6 +41,12 @@ func doCount(filename string) {
 	packageName := ""
 	for i, v := range data {
 		if startOfLine {
+			// println("start of line", i, i+11, data[i])
+			if string(data[i:i+21]) == `$synthesizeMethods();` {
+				// println("Analysed to end of file ... looks like a library")
+				return
+			}
+
 			if string(data[i:i+11]) == `$packages["` {
 				// scan out past the 11 byte mark to get the terminating " quote
 				for ii := i + 12; ; ii++ {
